@@ -1,0 +1,110 @@
+[{  "id":"aboutPage",
+    "skills": {
+      "Web-developer": true,
+      "Frontend developer": true,
+      "Video Editor": true,
+      "Professional Video editor": "Green screen, transition...",
+      "Robotics": true,
+      "Projects completed": "Successfully completed more than 100 projects",
+      "Programming languages": ["Python", "CSS", "HTML", "Java", "JavaScript", "React"]
+    },
+    "experience": {
+      "Coding": "One year coding experience",
+      "Video Editing": "More than a year video editing experience"
+    },
+    "education": {
+      "Coding": "One year coding experience",
+      "Video Editing": "More than a year video editing experience",
+      "jgfvihbkh":"jhbvilhbhjvbjkh"
+    }
+    
+  },
+{
+    "id":"sevicePage",
+    "WebDisgn" :{
+        "p":"Frontend magician! I'm Monu, turning visions into pixel-perfect reality. Proficient in HTML, CSS, and JavaScript, my passion lies in crafting sleek, user-centric websites. Let's collaborate on your next project! #WebDev #FrontendMagic",
+        "Demolink":"Not available"
+    },
+    "Calculator" :{
+        "p":"Designed and implemented a dynamic and user-friendly calculator using HTML, CSS, and JavaScript, showcasing my proficiency in front-end development and passion for creating intuitive and engaging web applications.",
+        "Demolink":"Not available"
+    },
+    "Play Games" :{
+        "p":"Successfully crafted an interactive and visually appealing game using HTML, CSS, and JavaScript, demonstrating a keen eye for design, strong coding abilities, and a passion for creating engaging user experiences in the realm of web-based gaming.",
+        "Demolink":"Not available"
+    },
+    "Video Editing" :{
+        "p":"Passionate video editor here, transforming concepts into cinematic masterpieces. Proficient in (davinci resolve, openshot , kinemaster , pwerdirector...) I specialize in visual storytelling that captivates. Let's bring your story to life! #VideoEditing #VisualStorytelle",
+        "Demolink":"https://youtu.be/kBmNpEcihA4?si=1Mq5sfxUxwKrwKnH"
+    }
+},
+{
+    "id":"PortfolioPage",
+    "Robotics": {
+        "p":"I had worked on many projects like remote control cars, Gesture control wheelchair,boat, helicopters, humanoid robot, obstacle avoiding robot, and also many projects based on aurdino,PIR,LDR....",
+        "ImageLink":"https://i.ibb.co/tx3zXNb/2b8fe4a5-eba8-420b-bb25-222188a6fc37.jpg",
+        "ExploreMore":"Link is not available"
+    },
+    "Our Youtube channel":{
+        "p":"I had also started a youtube channel with my friends, you feel free to reach-out our channel link is mentioned below...",
+        "ImageLink":"https://i.ibb.co/2qJK0w4/5d0a1455-bc79-471c-83ec-55dc7e558866.jpg",
+        "ExploreMore":"https://youtu.be/kBmNpEcihA4?si=1Mq5sfxUxwKrwKnH"
+    },
+    "Website Developer":{
+        "p":"I am also a fronted website developer",
+        "ImageLink":"https://i.ibb.co/61PQ5dQ/work-3-1-1.jpg",
+        "ExploreMore":"https://youtu.be/kBmNpEcihA4?si=1Mq5sfxUxwKrwKnH"
+    },
+    "Video Editing":{
+        "p":"As a video editor, I bring narratives to life through seamless cutsand a keen eye for detail. Turning moments into cinematic experiences🎥 #VideoEditing #CreativeStorytelling",
+        "ImageLink":"https://i.ibb.co/Dk7vrdL/1fce1000-f25c-468c-be75-4b55cc353d44.jpg",
+        "ExploreMore":"https://youtu.be/kBmNpEcihA4?si=1Mq5sfxUxwKrwKnH"
+    }
+},{
+    "id":"Products",
+    "Products 0" :{
+        "ProductName":"jarwasgdish",
+        "p":"Designed and implemented a dynamic and user-friendly calculator using HTML, CSS, and JavaScript, showcasing my proficiency in front-end development and passion for creating intuitive and engaging web applications asdjbgjsbdgsdkbgkjbdskgbkskdnivci shdig sidbg sg sdbig sig sidng sdiug iusd gsd giusgn sdg sodug sdo gsdhu gous gso gosid gsndg sopd ghias dhios dpgsd.",
+        "ProductLink":"https://i.ibb.co/234Zjy1/d3f254a6-d443-4e53-9523-0b68cdfb8dc6.jpg",
+        "backgroundImage": "https://i.ibb.co/234Zjy1/d3f254a6-d443-4e53-9523-0b68cdfb8dc6.jpg"
+    },
+    "Product 01":{
+        "ProductName":"jaasdgrwish",
+        "p":"As a video editor, I bring narratives to life through seamless cutsand a keen eye for detail. Turning moments into cinematic experiences🎥 #VideoEditing #CreativeStorytelling",
+        "ProductLink":"#",
+        "backgroundImage": "https://i.ibb.co/234Zjy1/d3f254a6-d443-4e53-9523-0b68cdfb8dc6.jpg"
+    },
+    "Product 02":{
+        "ProductName":"jarwfdbish",
+        "p":"As a video editor, I bring narratives to life through seamless cutsand a keen eye for detail. Turning moments into cinematic experiences🎥 #VideoEditing #CreativeStorytelling",
+        "ProductLink":"#",
+        "backgroundImage": "https://i.ibb.co/234Zjy1/d3f254a6-d443-4e53-9523-0b68cdfb8dc6.jpg"
+    },
+    "Product 03":{
+        "ProductName":"jarwdkgnkish",
+        "p":"As a video editor, I bring narratives to life through seamless cutsand a keen eye for detail. Turning moments into cinematic experiences🎥 #VideoEditing #CreativeStorytelling",
+        "ProductLink":"#",
+        "backgroundImage": "https://i.ibb.co/234Zjy1/d3f254a6-d443-4e53-9523-0b68cdfb8dc6.jpg"
+    },
+    "Product 04":{
+        "ProductName":"jarwisfknh",
+        "p":"As a video editor, I bring narratives to life through seamless cutsand a keen eye for detail. Turning moments into cinematic experiences🎥 #VideoEditing #CreativeStorytelling",
+        "ProductLink":"#",
+        "backgroundImage": "https://i.ibb.co/234Zjy1/d3f254a6-d443-4e53-9523-0b68cdfb8dc6.jpg"
+    },
+    "Product 05":{
+        "ProductName":"jarwisfkh",
+        "p":"As a video editor, I bring narratives to life through seamless cutsand a keen eye for detail. Turning moments into cinematic experiences🎥 #VideoEditing #CreativeStorytelling",
+        "ProductLink":"#",
+        "backgroundImage": "https://i.ibb.co/234Zjy1/d3f254a6-d443-4e53-9523-0b68cdfb8dc6.jpg"
+    },
+    "Product 06":{
+        "ProductName":"jarwish",
+        "p":"As a video editor, I bring narratives to life through seamless cutsand a keen eye for detail. Turning moments into cinematic experiences🎥 #VideoEditing #CreativeStorytelling",
+        "ProductLink":"#",
+        "backgroundImage": "https://i.ibb.co/234Zjy1/d3f254a6-d443-4e53-9523-0b68cdfb8dc6.jpg"
+    }
+
+}
+]
+  
