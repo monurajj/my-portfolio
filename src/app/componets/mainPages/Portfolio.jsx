@@ -2,6 +2,7 @@
 import React from "react";
 import data from "../../data.json"; // Importing JSON data
 import { FaExternalLinkAlt } from "react-icons/fa";
+import Image from 'next/image';
 
 const Portfolio = () => {
   const portfolioPageData = data.find((item) => item.id === "PortfolioPage");
@@ -27,16 +28,18 @@ const Portfolio = () => {
                     className="p-4 bg-white rounded shadow-md relative overflow-hidden"
                   >
                     {portfolioPageData[item].ImageLink ? (
-                      <img
-                        src={portfolioPageData[item].ImageLink}
-                        alt={item}
-                        className="w-full h-auto object-cover rounded-lg transform transition-transform duration-500 hover:scale-150"
-                        onError={(e) => {
-                          e.target.onerror = null;
-                          e.target.src =
-                            "https://via.placeholder.com/400x300?text=Image+Not+Found";
-                        }}
-                      />
+                      <Image
+                      src={portfolioPageData[item].ImageLink}
+                      alt={item}
+                      layout="responsive"
+                      width={400}
+                      height={300}
+                      className="w-full h-auto object-cover rounded-lg transform transition-transform duration-500 hover:scale-150"
+                      onError={(e) => {
+                        e.target.onerror = null;
+                        e.target.src = "https://via.placeholder.com/400x300?text=Image+Not+Found";
+                      }}
+                    />
                     ) : (
                       <div className="bg-gray-200 w-full h-full rounded-lg"></div>
                     )}
