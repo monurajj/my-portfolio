@@ -31,7 +31,7 @@ const HomePage = () => {
   }, [currentCharIndex, currentWordIndex, words]);
 
   return (
-    <div className="-z-8 ">
+    <div id="home" className="-z-8 ">
       {/* Background Video */}
       <div className="absolute -z-40 opacity-8">
         <video autoPlay loop muted style={{ width: "100%" }}>

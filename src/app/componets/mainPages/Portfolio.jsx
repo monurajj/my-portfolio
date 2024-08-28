@@ -12,7 +12,7 @@ const Portfolio = () => {
 
   return (
     <>
-      <div className="py-8">
+      <div id="portfolio" className="py-8">
         <div className="container mx-auto">
           <h1 className="mb-6 text-center text-4xl md:text-6xl font-bold mt-8">
             Portfolio

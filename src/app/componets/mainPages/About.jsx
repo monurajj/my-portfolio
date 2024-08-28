@@ -25,7 +25,7 @@ const VortexDemoSecond=()=> {
 
   return (
     <>
-      <div className="w-[calc(100%)] mx-auto rounded-md h-screen overflow-hidden">
+      <div className="w-[calc(100%)] mx-auto rounded-md h-screen overflow-hidden" id="about">
         <Vortex
           backgroundColor="black"
           rangeY={800}

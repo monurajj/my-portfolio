@@ -17,7 +17,7 @@ const Products = () => {
       }));
   
     return (
-      <div className="">
+      <div id="products" className="">
         <div className="max-auto">
           <h1 className="mb-6 text-center text-4xl md:text-6xl font-bold mt-8">
             Products
