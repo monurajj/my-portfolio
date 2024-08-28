@@ -1,9 +1,10 @@
 "use client";
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import profileimage from "../../assets/profileImagenobg.png";
 import signImag from "../../assets/sign1.png";
 import { BackgroundBeams } from "../ui/background-beams";
+import { ContainerScroll } from "../ui/container-scroll-animation";
 
 const HomePage = () => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -23,24 +24,64 @@ const HomePage = () => {
           setCurrentCharIndex(0);
           setDisplayedText("");
           setCurrentWordIndex((prev) => (prev + 1) % words.length);
-        }, 2000); // Adjust the delay before starting to type the next word
+        }, 2000);
       }
     };
-    const typingDelay = setTimeout(type, 200); // Adjust the typing speed
+    const typingDelay = setTimeout(type, 200);
     return () => clearTimeout(typingDelay);
   }, [currentCharIndex, currentWordIndex, words]);
 
   return (
-    <div id="home" className="-z-8 ">
+    <div id="home" className="relative min-h-screen overflow-hidden">
       {/* Background Video */}
-      <div className="absolute -z-40 opacity-8">
-        <video autoPlay loop muted style={{ width: "100%" }}>
+      <div className="absolute inset-0 -z-40 opacity-80">
+        <video autoPlay loop muted className="object-cover w-full h-full">
           <source src="/bgvideo.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
 
-      <div className="min-h-screen ">
+      {/* Mobile View */}
+      <div className="lg:hidden">
+        <main className="relative flex flex-col items-center justify-center h-full pt-8 px-4">
+          <div className="w-full z-10 text-center -mb-8">
+            <p className="text-3xl font-black bg-gradient-to-r from-yellow-500 to-red-600 text-transparent bg-clip-text animate-anime">
+              Student of CSAI
+            </p>
+            <h1 className="text-4xl font-black my-5 bg-gradient-to-r from-red-500 to-green-400 text-transparent bg-clip-text animate-anime">
+              Hi, I'm <span className="text-pink-100">Monu Rajj</span> from{" "}
+              <span>{displayedText}</span>
+            </h1>
+          </div>
+
+          {/* Profile Image */}
+          <ContainerScroll>
+          <div className="w-4/4 max-w-[400px] aspect-square z-[40] mt-">
+            <div className="rounded-[20px] overflow-hidden shadow-glow hover:shadow-glow-lg transition-shadow duration-300">
+              <Image
+                className="w-full h-full object-cover"
+                src={profileimage}
+                alt="Profile Image"
+              />
+            </div>
+          </div>
+          </ContainerScroll>
+        </main>
+
+        {/* Signature Image */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 mb-8">
+          <div className="h-[100px] w-[150px]">
+            <Image
+              className="w-full h-full object-contain"
+              src={signImag}
+              alt="Loading Image..."
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Desktop View (Your Original Code) */}
+      <div className="hidden lg:block">
         <main className="relative flex items-center top-32">
           <div className="w-[80%] h-[40%] m-8 ml-16 z-10">
             <p className="text-[50px] font-black -webkit-text-stroke-2 -webkit-text-stroke-black bg-gradient-to-r from-yellow-500 to-red-600 text-transparent bg-clip-text animate-anime">
@@ -74,10 +115,10 @@ const HomePage = () => {
             />
           </div>
         </div>
+      </div>
 
-        <div className="z-[-20px]">
-          <BackgroundBeams />
-        </div>
+      <div className="z-[-20px]">
+        <BackgroundBeams />
       </div>
     </div>
   );

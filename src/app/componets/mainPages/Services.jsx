@@ -24,10 +24,6 @@ const Services = () => {
 
         <h1 className="mb-6 text-center text-4xl md:text-6xl font-bold mt-8">My services</h1>
         <div className="absolute -z-40 opacity-8">
-        <video autoPlay loop muted style={{ width: "100%" }}>
-          <source src="/bgvideoservices.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
       </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
           

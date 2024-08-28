@@ -89,7 +89,7 @@ export const InfiniteMovingCards: React.FC<Props> = ({
         {items.map((item, idx) => (
           <li
             key={idx}
-            className="w-[350px] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-700 px-[120px] py-9 md:w-[450px]"
+            className="w-[450px] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-700 px-[120px] py-9 md:w-[450px]"
             style={{
               backgroundImage: `url(${item.backgroundImage})`,
               backgroundSize: "cover",
@@ -97,9 +97,12 @@ export const InfiniteMovingCards: React.FC<Props> = ({
               backgroundRepeat: "no-repeat",
             }}
           >
-            <div className="absolute top-1 left-0 right-0 text-center text-white font-bold text-lg">
-              {item.productName}
-            </div>
+            <div className="absolute top-2 left-0 right-0 text-center text-white font-extrabold text-xl bg-black bg-opacity-60 py-3 px-5 rounded-lg shadow-lg">
+  {item.productName}
+</div>
+
+
+
             <blockquote className="relative z-20">
               <div
                 aria-hidden="true"
@@ -107,22 +110,27 @@ export const InfiniteMovingCards: React.FC<Props> = ({
               ></div>
 
               <div className="overflow-y-auto max-h-40">
-                <p className="text-sm leading-[1.6] text-gray-100 font-normal px-4 py-2">
-                  {item.p}
-                </p>
+                <p className="mt-8 text-sm leading-[1.6] text-white font-semibold px-6 py-3 bg-black bg-opacity-70 border-2 border-red-400 rounded-lg">
+  {item.p}
+</p>
+
+
+
+
               </div>
               {item.productLink && (
-            <div >
-                <a
-                  href={item.productLink}
-                  className="absolute bottom-[-20px] right-[-70px] bg-blue-500 text-white px-4 py-2 rounded-md"
-                  style={{ zIndex: 10 }}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Explore Now
-                </a>
-                </div>
+            <div>
+            <a
+              href={item.productLink}
+              className="absolute bottom-[-30px] right-[-100px] bg-blue-500 text-white px-3 py-2 rounded-lg shadow-md transition-transform transform hover:scale-105 hover:bg-blue-600"
+              style={{ zIndex: 10 }}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Explore Now
+            </a>
+          </div>
+          
               )}
             </blockquote>
           </li>
