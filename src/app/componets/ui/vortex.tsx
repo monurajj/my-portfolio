@@ -1,6 +1,6 @@
-"use client"
+"use client";
 import { cn } from "../../utils/cn";
-import React, { useEffect, useRef } from "react";
+import React, { useCallback, useEffect, useRef } from "react";
 import { createNoise3D } from "simplex-noise";
 import { motion } from "framer-motion";
 
@@ -55,7 +55,7 @@ export const Vortex = (props: VortexProps) => {
   const lerp = (n1: number, n2: number, speed: number): number =>
     (1 - speed) * n1 + speed * n2;
 
-  const setup = () => {
+  const setup = useCallback(() => {
     const canvas = canvasRef.current;
     const container = containerRef.current;
     if (canvas && container) {
@@ -67,11 +67,10 @@ export const Vortex = (props: VortexProps) => {
         draw(canvas, ctx);
       }
     }
-  };
+  }, []);
 
   const initParticles = () => {
     tick = 0;
-    // simplex = new SimplexNoise();
     particleProps = new Float32Array(particlePropsLength);
 
     for (let i = 0; i < particlePropsLength; i += particlePropCount) {
@@ -186,18 +185,18 @@ export const Vortex = (props: VortexProps) => {
     return x > canvas.width || x < 0 || y > canvas.height || y < 0;
   };
 
-  const resize = (
-    canvas: HTMLCanvasElement,
-    ctx?: CanvasRenderingContext2D
-  ) => {
-    const { innerWidth, innerHeight } = window;
+  const resize = useCallback(
+    (canvas: HTMLCanvasElement, ctx?: CanvasRenderingContext2D) => {
+      const { innerWidth, innerHeight } = window;
 
-    canvas.width = innerWidth;
-    canvas.height = innerHeight;
+      canvas.width = innerWidth;
+      canvas.height = innerHeight;
 
-    center[0] = 0.5 * canvas.width;
-    center[1] = 0.5 * canvas.height;
-  };
+      center[0] = 0.5 * canvas.width;
+      center[1] = 0.5 * canvas.height;
+    },
+    [center]
+  );
 
   const renderGlow = (
     canvas: HTMLCanvasElement,
@@ -228,29 +227,28 @@ export const Vortex = (props: VortexProps) => {
 
   useEffect(() => {
     setup();
-    window.addEventListener("resize", () => {
+    const handleResize = () => {
       const canvas = canvasRef.current;
       const ctx = canvas?.getContext("2d");
       if (canvas && ctx) {
         resize(canvas, ctx);
       }
-    });
-  }, []);
+    };
+    
+    window.addEventListener("resize", handleResize);
+    
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [setup, resize]);
 
   return (
-    <div className={cn("relative h-full w-full", props.containerClassName)}>
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        ref={containerRef}
-        className="absolute h-full w-full inset-0 z-0 bg-transparent flex items-center justify-center"
-      >
-        <canvas ref={canvasRef}></canvas>
-      </motion.div>
-
-      <div className={cn("relative z-10", props.className)}>
-        {props.children}
-      </div>
+    <div
+      ref={containerRef}
+      className={cn("relative overflow-hidden", props.containerClassName)}
+    >
+      <canvas ref={canvasRef} className={cn("absolute top-0 left-0 w-full h-full", props.className)} />
+      <div className="relative">{props.children}</div>
     </div>
   );
 };
