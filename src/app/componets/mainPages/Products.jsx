@@ -23,7 +23,7 @@ const Products = () => {
             Products
           </h1>
           {/* Increase the height of the container */}
-          <div className="h-[25rem] rounded-md flex flex-col antialiased dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
+          <div className=" h-[25rem] rounded-md flex flex-col antialiased dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
             <InfiniteMovingCards items={items} direction="right" speed="normal" />
           </div>
         </div>

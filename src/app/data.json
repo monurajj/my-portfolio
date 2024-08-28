@@ -60,17 +60,19 @@
         "ImageLink":"https://i.ibb.co/Dk7vrdL/1fce1000-f25c-468c-be75-4b55cc353d44.jpg",
         "ExploreMore":"https://youtu.be/kBmNpEcihA4?si=1Mq5sfxUxwKrwKnH"
     }
-},{
-    "id":"Products",
-    "Products 0" :{
-        "ProductName":"jarwasgdish",
-        "p":"Designed and implemented a dynamic and user-friendly calculator using HTML, CSS, and JavaScript, showcasing my proficiency in front-end development and passion for creating intuitive and engaging web applications asdjbgjsbdgsdkbgkjbdskgbkskdnivci shdig sidbg sg sdbig sig sidng sdiug iusd gsd giusgn sdg sodug sdo gsdhu gous gso gosid gsndg sopd ghias dhios dpgsd.",
-        "ProductLink":"https://i.ibb.co/234Zjy1/d3f254a6-d443-4e53-9523-0b68cdfb8dc6.jpg",
-        "backgroundImage": "https://i.ibb.co/234Zjy1/d3f254a6-d443-4e53-9523-0b68cdfb8dc6.jpg"
-    },
+},
+    {
+        "id": "Products",
+        "Products 0": {
+            "ProductName": "Monadonocks",
+            "p": "Offering essentials at unbeatable prices, with a significant portion of profits dedicated to charitable causes and launching our NGO to support communities",
+            "ProductLink": "https://66ca3bae967fc4000942d7ab--aesthetic-lokum-ef0e0b.netlify.app/",
+            "backgroundImage": "https://i.ibb.co/vPnMbB4/610f3a18-bb1a-4f56-9ff5-ece9fdf7ce6e.jpg"
+        }
+    ,
     "Product 01":{
         "ProductName":"jaasdgrwish",
-        "p":"As a video editor, I bring narratives to life through seamless cutsand a keen eye for detail. Turning moments into cinematic experiences🎥 #VideoEditing #CreativeStorytelling",
+        "p":"Mental health solver services by Monadnocks where we prioritise your health more than anything.",
         "ProductLink":"#",
         "backgroundImage": "https://i.ibb.co/234Zjy1/d3f254a6-d443-4e53-9523-0b68cdfb8dc6.jpg"
     },
@@ -85,25 +87,8 @@
         "p":"As a video editor, I bring narratives to life through seamless cutsand a keen eye for detail. Turning moments into cinematic experiences🎥 #VideoEditing #CreativeStorytelling",
         "ProductLink":"#",
         "backgroundImage": "https://i.ibb.co/234Zjy1/d3f254a6-d443-4e53-9523-0b68cdfb8dc6.jpg"
-    },
-    "Product 04":{
-        "ProductName":"jarwisfknh",
-        "p":"As a video editor, I bring narratives to life through seamless cutsand a keen eye for detail. Turning moments into cinematic experiences🎥 #VideoEditing #CreativeStorytelling",
-        "ProductLink":"#",
-        "backgroundImage": "https://i.ibb.co/234Zjy1/d3f254a6-d443-4e53-9523-0b68cdfb8dc6.jpg"
-    },
-    "Product 05":{
-        "ProductName":"jarwisfkh",
-        "p":"As a video editor, I bring narratives to life through seamless cutsand a keen eye for detail. Turning moments into cinematic experiences🎥 #VideoEditing #CreativeStorytelling",
-        "ProductLink":"#",
-        "backgroundImage": "https://i.ibb.co/234Zjy1/d3f254a6-d443-4e53-9523-0b68cdfb8dc6.jpg"
-    },
-    "Product 06":{
-        "ProductName":"jarwish",
-        "p":"As a video editor, I bring narratives to life through seamless cutsand a keen eye for detail. Turning moments into cinematic experiences🎥 #VideoEditing #CreativeStorytelling",
-        "ProductLink":"#",
-        "backgroundImage": "https://i.ibb.co/234Zjy1/d3f254a6-d443-4e53-9523-0b68cdfb8dc6.jpg"
     }
+    
 
 }
 ]
