@@ -10,14 +10,12 @@ const HomePage = () => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [currentCharIndex, setCurrentCharIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
-  const words = ["India", "Bihar"];
 
   useEffect(() => {
+    const words = ["India", "Bihar"]; // Moved inside useEffect to avoid dependencies warning
     const type = () => {
       if (currentCharIndex < words[currentWordIndex].length) {
-        setDisplayedText(
-          (prev) => prev + words[currentWordIndex][currentCharIndex]
-        );
+        setDisplayedText((prev) => prev + words[currentWordIndex][currentCharIndex]);
         setCurrentCharIndex((prev) => prev + 1);
       } else {
         setTimeout(() => {
@@ -29,7 +27,7 @@ const HomePage = () => {
     };
     const typingDelay = setTimeout(type, 200);
     return () => clearTimeout(typingDelay);
-  }, [currentCharIndex, currentWordIndex, words]);
+  }, [currentCharIndex, currentWordIndex]);
 
   return (
     <div id="home" className="relative min-h-screen overflow-hidden">
@@ -49,22 +47,22 @@ const HomePage = () => {
               Student of CSAI
             </p>
             <h1 className="text-4xl font-black my-5 bg-gradient-to-r from-red-500 to-green-400 text-transparent bg-clip-text animate-anime">
-              Hi, I'm <span className="text-pink-100">Monu Rajj</span> from{" "}
+              Hi, I&apos;m <span className="text-pink-100">Monu Rajj</span> from{" "}
               <span>{displayedText}</span>
             </h1>
           </div>
 
           {/* Profile Image */}
           <ContainerScroll>
-          <div className="w-4/4 max-w-[400px] aspect-square z-[40] mt-">
-            <div className="rounded-[20px] overflow-hidden shadow-glow hover:shadow-glow-lg transition-shadow duration-300">
-              <Image
-                className="w-full h-full object-cover"
-                src={profileimage}
-                alt="Profile Image"
-              />
+            <div className="w-4/4 max-w-[400px] aspect-square z-[40] mt-">
+              <div className="rounded-[20px] overflow-hidden shadow-glow hover:shadow-glow-lg transition-shadow duration-300">
+                <Image
+                  className="w-full h-full object-cover"
+                  src={profileimage}
+                  alt="Profile Image"
+                />
+              </div>
             </div>
-          </div>
           </ContainerScroll>
         </main>
 
@@ -88,7 +86,7 @@ const HomePage = () => {
               Student of CSAI
             </p>
             <h1 className="text-[60px] font-black my-5 -webkit-text-stroke-2 -webkit-text-stroke-black bg-gradient-to-r from-red-500 to-green-400 text-transparent bg-clip-text shadow-[rgb(225,11,11)] animate-anime">
-              Hi, I'm <span className="text-pink-100">Monu Rajj</span> from{" "}
+              Hi, I&apos;m <span className="text-pink-100">Monu Rajj</span> from{" "}
               <span>{displayedText}</span>
             </h1>
           </div>

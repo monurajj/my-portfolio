@@ -1,5 +1,5 @@
-"use client"
-import React, { useEffect, useRef, useState } from "react";
+"use client";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import { cn } from "../../utils/cn"; // Assuming this is your utility for classNames
 
 interface Props {
@@ -25,50 +25,43 @@ export const InfiniteMovingCards: React.FC<Props> = ({
   const containerRef = useRef<HTMLDivElement>(null);
   const scrollerRef = useRef<HTMLUListElement>(null);
 
-  useEffect(() => {
-    addAnimation();
-  }, []);
-
   const [start, setStart] = useState(false);
 
-  const addAnimation = () => {
+  const getDirection = useCallback(() => {
+    if (containerRef.current) {
+      containerRef.current.style.setProperty(
+        "--animation-direction",
+        direction === "left" ? "forwards" : "reverse"
+      );
+    }
+  }, [direction]);
+
+  const getSpeed = useCallback(() => {
+    if (containerRef.current) {
+      const duration =
+        speed === "fast" ? "20s" : speed === "normal" ? "40s" : "80s";
+      containerRef.current.style.setProperty("--animation-duration", duration);
+    }
+  }, [speed]);
+
+  const addAnimation = useCallback(() => {
     if (containerRef.current && scrollerRef.current) {
       const scrollerContent = Array.from(scrollerRef.current.children);
 
       scrollerContent.forEach((item) => {
         const duplicatedItem = item.cloneNode(true);
-        if (scrollerRef.current) {
-          scrollerRef.current.appendChild(duplicatedItem);
-        }
+        scrollerRef.current?.appendChild(duplicatedItem);
       });
 
       getDirection();
       getSpeed();
       setStart(true);
     }
-  };
+  }, [getDirection, getSpeed]); // Include getDirection and getSpeed as dependencies
 
-  const getDirection = () => {
-    if (containerRef.current) {
-      if (direction === "left") {
-        containerRef.current.style.setProperty("--animation-direction", "forwards");
-      } else {
-        containerRef.current.style.setProperty("--animation-direction", "reverse");
-      }
-    }
-  };
-
-  const getSpeed = () => {
-    if (containerRef.current) {
-      if (speed === "fast") {
-        containerRef.current.style.setProperty("--animation-duration", "20s");
-      } else if (speed === "normal") {
-        containerRef.current.style.setProperty("--animation-duration", "40s");
-      } else {
-        containerRef.current.style.setProperty("--animation-duration", "80s");
-      }
-    }
-  };
+  useEffect(() => {
+    addAnimation();
+  }, [addAnimation]);
 
   return (
     <div
@@ -98,10 +91,8 @@ export const InfiniteMovingCards: React.FC<Props> = ({
             }}
           >
             <div className="absolute top-2 left-0 right-0 text-center text-white font-extrabold text-xl bg-black bg-opacity-60 py-3 px-5 rounded-lg shadow-lg">
-  {item.productName}
-</div>
-
-
+              {item.productName}
+            </div>
 
             <blockquote className="relative z-20">
               <div
@@ -111,26 +102,21 @@ export const InfiniteMovingCards: React.FC<Props> = ({
 
               <div className="overflow-y-auto max-h-40">
                 <p className="mt-8 text-sm leading-[1.6] text-white font-semibold px-6 py-3 bg-black bg-opacity-70 border-2 border-red-400 rounded-lg">
-  {item.p}
-</p>
-
-
-
-
+                  {item.p}
+                </p>
               </div>
               {item.productLink && (
-            <div>
-            <a
-              href={item.productLink}
-              className="absolute bottom-[-30px] right-[-100px] bg-blue-500 text-white px-3 py-2 rounded-lg shadow-md transition-transform transform hover:scale-105 hover:bg-blue-600"
-              style={{ zIndex: 10 }}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Explore Now
-            </a>
-          </div>
-          
+                <div>
+                  <a
+                    href={item.productLink}
+                    className="absolute bottom-[-30px] right-[-100px] bg-blue-500 text-white px-3 py-2 rounded-lg shadow-md transition-transform transform hover:scale-105 hover:bg-blue-600"
+                    style={{ zIndex: 10 }}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Explore Now
+                  </a>
+                </div>
               )}
             </blockquote>
           </li>

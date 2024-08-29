@@ -29,20 +29,20 @@ module.exports = {
       },
       colors: {
         ...defaultTheme.colors, // Include default Tailwind colors
-        ...colors, // Include extended colors from Tailwind
+        sky: colors.sky,
+        stone: colors.stone,
+        neutral: colors.neutral,
+        gray: colors.gray,
+        slate: colors.slate,
       },
     },
   },
   plugins: [
-    function addVariablesForColors({ addBase, theme }) {
-      let allColors = flattenColorPalette(theme("colors"));
+    function addVariablesForColors() {
+      let allColors = flattenColorPalette();
       let newVars = Object.fromEntries(
         Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
       );
-
-      addBase({
-        ":root": newVars,
-      });
     },
   ],
 };

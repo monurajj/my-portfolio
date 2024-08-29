@@ -1,7 +1,8 @@
-"use client"
+"use client";
 import React from "react";
 import data from "../../data.json";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import Image from "next/image";
 
 const Portfolio = () => {
   const portfolioPageData = data.find((item) => item.id === "PortfolioPage");
@@ -27,9 +28,12 @@ const Portfolio = () => {
                     className="p-4 bg-white rounded shadow-md relative overflow-hidden"
                   >
                     {portfolioPageData[item].ImageLink ? (
-                      <img
+                      <Image
                         src={portfolioPageData[item].ImageLink}
                         alt={item}
+                        layout="responsive" // Responsive layout
+                        width={400} // Adjust the width as needed
+                        height={300} // Adjust the height as needed
                         className="w-full h-auto object-cover rounded-lg transform transition-transform duration-500 hover:scale-150"
                         onError={(e) => {
                           e.target.onerror = null;
