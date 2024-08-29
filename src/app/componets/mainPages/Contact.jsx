@@ -45,7 +45,7 @@ const Contact = () => {
     <div id="contact" className="relative min-h-screen flex flex-col justify-center overflow-hidden">
       {/* Background Video */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
-        <video autoPlay loop muted className="w-full h-full object-cover opacity-70">
+        <video autoPlay loop muted className="w-full h-full object-cover opacity-30">
           <source src="/bgvideocontact.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>

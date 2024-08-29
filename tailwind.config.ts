@@ -29,7 +29,11 @@ module.exports = {
       },
       colors: {
         ...defaultTheme.colors, // Include default Tailwind colors
-        ...colors, // Include extended colors from Tailwind
+        sky: colors.sky,
+        stone: colors.stone,
+        neutral: colors.neutral,
+        gray: colors.gray,
+        slate: colors.slate,
       },
     },
   },
@@ -39,7 +43,6 @@ module.exports = {
       let newVars = Object.fromEntries(
         Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
       );
-
     },
   ],
 };
