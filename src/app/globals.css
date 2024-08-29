@@ -7,6 +7,9 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -32,7 +35,3 @@ body {
   }
 }
 /* globals.css */
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
