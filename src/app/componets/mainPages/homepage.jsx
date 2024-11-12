@@ -1,10 +1,11 @@
-"use client";
+"use client"
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import profileimage from "../../assets/profileImagenobg.png";
-import signImag from "../../assets/sign1.png";
+import signImage from "../../assets/sign1.png";
 import { BackgroundBeams } from "../ui/background-beams";
 import { ContainerScroll } from "../ui/container-scroll-animation";
+import { motion } from "framer-motion";
 
 const HomePage = () => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -12,7 +13,7 @@ const HomePage = () => {
   const [displayedText, setDisplayedText] = useState("");
 
   useEffect(() => {
-    const words = ["India", "Bihar"]; // Moved inside useEffect to avoid dependencies warning
+    const words = ["India", "Bihar"];
     const type = () => {
       if (currentCharIndex < words[currentWordIndex].length) {
         setDisplayedText((prev) => prev + words[currentWordIndex][currentCharIndex]);
@@ -43,18 +44,33 @@ const HomePage = () => {
       <div className="lg:hidden">
         <main className="relative flex flex-col items-center justify-center h-full pt-8 px-4">
           <div className="w-full z-10 text-center -mb-8">
-            <p className="text-3xl font-black bg-gradient-to-r from-yellow-500 to-red-600 text-transparent bg-clip-text animate-anime">
+            <motion.p
+              className="text-3xl font-black bg-gradient-to-r from-yellow-500 to-red-600 text-transparent bg-clip-text animate-anime"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+            >
               Student of CSAI
-            </p>
-            <h1 className="text-4xl font-black my-5 bg-gradient-to-r from-red-500 to-green-400 text-transparent bg-clip-text animate-anime">
+            </motion.p>
+            <motion.h1
+              className="text-4xl font-black my-5 bg-gradient-to-r from-red-500 to-green-400 text-transparent bg-clip-text animate-anime"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.2 }}
+            >
               Hi, I&apos;m <span className="text-pink-100">Monu Rajj</span> from{" "}
               <span>{displayedText}</span>
-            </h1>
+            </motion.h1>
           </div>
 
           {/* Profile Image */}
           <ContainerScroll>
-            <div className="w-4/4 max-w-[400px] aspect-square z-[40] mt-">
+            <motion.div
+              className="w-4/4 max-w-[400px] aspect-square z-[40] mt-"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, delay: 0.4 }}
+            >
               <div className="rounded-[20px] overflow-hidden shadow-glow hover:shadow-glow-lg transition-shadow duration-300">
                 <Image
                   className="w-full h-full object-cover"
@@ -62,19 +78,24 @@ const HomePage = () => {
                   alt="Profile Image"
                 />
               </div>
-            </div>
+            </motion.div>
           </ContainerScroll>
         </main>
 
         {/* Signature Image */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 mb-8">
-          <div className="h-[100px] w-[150px]">
+          <motion.div
+            className="h-[100px] w-[150px]"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.6 }}
+          >
             <Image
               className="w-full h-full object-contain"
-              src={signImag}
+              src={signImage}
               alt="Loading Image..."
             />
-          </div>
+          </motion.div>
         </div>
       </div>
 
@@ -82,17 +103,32 @@ const HomePage = () => {
       <div className="hidden lg:block">
         <main className="relative flex items-center top-32">
           <div className="w-[80%] h-[40%] m-8 ml-16 z-10">
-            <p className="text-[50px] font-black -webkit-text-stroke-2 -webkit-text-stroke-black bg-gradient-to-r from-yellow-500 to-red-600 text-transparent bg-clip-text animate-anime">
+            <motion.p
+              className="text-[50px] font-black -webkit-text-stroke-2 -webkit-text-stroke-black bg-gradient-to-r from-yellow-500 to-red-600 text-transparent bg-clip-text animate-anime"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1 }}
+            >
               Student of CSAI
-            </p>
-            <h1 className="text-[60px] font-black my-5 -webkit-text-stroke-2 -webkit-text-stroke-black bg-gradient-to-r from-red-500 to-green-400 text-transparent bg-clip-text shadow-[rgb(225,11,11)] animate-anime">
+            </motion.p>
+            <motion.h1
+              className="text-[60px] font-black my-5 -webkit-text-stroke-2 -webkit-text-stroke-black bg-gradient-to-r from-red-500 to-green-400 text-transparent bg-clip-text shadow-[rgb(225,11,11)] animate-anime"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.2 }}
+            >
               Hi, I&apos;m <span className="text-pink-100">Monu Rajj</span> from{" "}
               <span>{displayedText}</span>
-            </h1>
+            </motion.h1>
           </div>
 
           {/* Profile Image */}
-          <div className="w-[40%] max-w-[600px] aspect-square z-[40] mt-[50px] mr-20">
+          <motion.div
+            className="w-[40%] max-w-[600px] aspect-square z-[40] mt-[50px] mr-20"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.4 }}
+          >
             <div className="rounded-[20px] overflow-hidden shadow-glow hover:shadow-glow-lg transition-shadow duration-300">
               <Image
                 className="w-full h-full object-cover"
@@ -100,18 +136,23 @@ const HomePage = () => {
                 alt="Profile Image"
               />
             </div>
-          </div>
+          </motion.div>
         </main>
 
         {/* Signature Image */}
         <div className="relative flex justify-center items-center z-10">
-          <div className="absolute -bottom-72 flex justify-center items-center h-[100px] w-[300px]">
+          <motion.div
+            className="absolute -bottom-72 flex justify-center items-center h-[100px] w-[300px]"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.6 }}
+          >
             <Image
               className="w-full h-full object-cover"
-              src={signImag}
+              src={signImage}
               alt="Loading Image..."
             />
-          </div>
+          </motion.div>
         </div>
       </div>
 

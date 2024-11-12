@@ -1,4 +1,4 @@
-"use client";
+"use client"
 import React, { useState } from "react";
 import { Vortex } from "../ui/vortex";
 import { TextGenerateEffect } from "../ui/text-generate-effect";
@@ -22,9 +22,9 @@ const VortexDemoSecond = () => {
   const [activeSection, setActiveSection] = useState("Skills");
 
   return (
-    <div className="w-full min-h-screen relative overflow-hidden" id="about">
+    <div className="w-full min-h-screen relative overflow-hidden bg-gradient-to-b from-blue-900 to-black" id="about">
       <Vortex
-        backgroundColor="black"
+        backgroundColor="transparent"
         className="flex items-center flex-col justify-center w-full min-h-screen"
       >
       <div className="relative z-10 w-full min-h-screen flex flex-col justify-center items-center px-4 md:px-10 py-8">
@@ -43,7 +43,7 @@ const VortexDemoSecond = () => {
           {/* Image section */}
           <div className="w-full md:w-1/2 flex items-center justify-center">
             <CardContainer className="inter-var w-full max-w-[300px] md:max-w-[400px]">
-              <CardBody className="bg-blue-200 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full rounded-xl p-4 md:p-8 border">
+              <CardBody className="bg-gradient-to-br from-blue-600 to-indigo-500 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full rounded-xl p-4 md:p-8 border">
                 <CardItem translateZ="150" className="w-full">
                   <div className="overflow-hidden rounded-full aspect-square">
                     <Image
@@ -117,7 +117,7 @@ const VortexDemoSecond = () => {
         </div>
 
         <div className="mt-12 w-full flex justify-center">
-          <button className="text-white bg-blue-500 hover:bg-blue-600 font-bold py-3 px-6 rounded-lg text-lg transition duration-300 ease-in-out transform hover:scale-105">
+          <button className="text-white bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 font-bold py-3 px-6 rounded-lg text-lg transition duration-300 ease-in-out transform hover:scale-105">
             More about me
           </button>
         </div>

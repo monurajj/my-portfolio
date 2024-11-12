@@ -8,7 +8,7 @@ const Portfolio = () => {
   const portfolioPageData = data.find((item) => item.id === "PortfolioPage");
 
   if (!portfolioPageData) {
-    return null; // Handle case where PortfolioPage data is not found
+    return null; // Handling case where PortfolioPage data is not found
   }
 
   return (
