@@ -81,45 +81,49 @@ export const InfiniteMovingCards: React.FC<Props> = ({
       >
         {items.map((item, idx) => (
           <li
-            key={idx}
-            className="w-[450px] max-w-full relative rounded-2xl border border-b-0 flex-shrink-0 border-slate-700 px-[120px] py-9 md:w-[450px]"
-            style={{
-              backgroundImage: `url(${item.backgroundImage})`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-            }}
-          >
-            <div className="absolute top-2 left-0 right-0 text-center text-white font-extrabold text-xl bg-black bg-opacity-60 py-3 px-5 rounded-lg shadow-lg">
-              {item.productName}
+          key={idx}
+          className="relative flex-shrink-0 rounded-lg overflow-hidden border border-gray-700 shadow-lg bg-white text-gray-900 w-[450px] h-[360px] md:w-[450px] md:h-[360px]"
+          style={{
+            backgroundImage: `url(${item.backgroundImage})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
+          {/* Dark overlay for contrast */}
+          <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        
+          {/* Product Name */}
+          <div className="absolute top-4 left-1/2 transform -translate-x-1/2 text-white text-xl font-bold bg-gradient-to-r from-black to-transparent bg-opacity-70 py-2 px-6 rounded-md shadow-md">
+            {item.productName}
+          </div>
+        
+          {/* Product Description */}
+          <div className="relative z-10 h-full flex flex-col justify-between items-center p-6">
+            {/* Centered Description */}
+            <div className="flex-grow flex items-center justify-center">
+              <p className="text-sm text-center leading-relaxed text-white bg-black bg-opacity-70 p-4 rounded-lg shadow-md max-w-[80%]">
+                {item.p}
+              </p>
             </div>
-
-            <blockquote className="relative z-20">
-              <div
-                aria-hidden="true"
-                className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
-              ></div>
-
-              <div className="overflow-y-auto max-h-40">
-                <p className="mt-8 text-sm leading-[1.6] text-white font-semibold px-6 py-3 bg-black bg-opacity-70 border-2 border-red-400 rounded-lg">
-                  {item.p}
-                </p>
+        
+            {/* Explore More Button */}
+            {item.productLink && (
+              <div className="absolute bottom-4 right-4">
+                <a
+                  href={item.productLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-gradient-to-r from-blue-500 to-indigo-500 text-white text-sm font-medium py-2 px-4 rounded-md shadow-md transition-transform hover:scale-105 hover:from-blue-600 hover:to-indigo-600"
+                >
+                  Explore More
+                </a>
               </div>
-              {item.productLink && (
-                <div>
-                  <a
-                    href={item.productLink}
-                    className="absolute bottom-[-30px] right-[-100px] bg-blue-500 text-white px-3 py-2 rounded-lg shadow-md transition-transform transform hover:scale-105 hover:bg-blue-600"
-                    style={{ zIndex: 10 }}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Explore Now
-                  </a>
-                </div>
-              )}
-            </blockquote>
-          </li>
+            )}
+          </div>
+        </li>
+        
+        
         ))}
       </ul>
     </div>

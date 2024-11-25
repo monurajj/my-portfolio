@@ -6,6 +6,7 @@ import { CardBody, CardContainer, CardItem } from "../ui/3d-cart";
 import Image from "next/image";
 import aboutImage from "../../assets/aboutImg1.png";
 import data from "../../data.json";
+import Link from "next/link";
 
 const words = `Hello! I'm Monu, a Computer Science and Artificial Intelligence
 student currently pursuing my B.Tech from Newton School of
@@ -17,6 +18,12 @@ completed more than 100 projects. Let's connect and explore the
 exciting intersection of technology and innovation!`;
 
 const AboutPage = data.find((page) => page.id === "aboutPage");
+
+
+// const handleClickAboutPage=()=>{
+//   src={'/AboutPage'}
+// }
+
 
 const VortexDemoSecond = () => {
   const [activeSection, setActiveSection] = useState("Skills");
@@ -117,9 +124,12 @@ const VortexDemoSecond = () => {
         </div>
 
         <div className="mt-12 w-full flex justify-center">
-          <button className="text-white bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 font-bold py-3 px-6 rounded-lg text-lg transition duration-300 ease-in-out transform hover:scale-105">
+          <Link
+          // onClick={handleClickAboutPage}
+          href={'/AboutPage'}
+          className="text-white bg-gradient-to-r from-blue-500 to-indigo-500 hover:from-blue-600 hover:to-indigo-600 font-bold py-3 px-6 rounded-lg text-lg transition duration-300 ease-in-out transform hover:scale-105">
             More about me
-          </button>
+          </Link>
         </div>
       </div>
     </Vortex>

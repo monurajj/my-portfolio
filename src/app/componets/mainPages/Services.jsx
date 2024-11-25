@@ -56,9 +56,9 @@ const Services = () => {
           </div>
         </div>
         <div className="mt-9 bottom-4 w-full flex justify-center">
-            <button className="text-white bg-blue-500 hover:bg-blue-600 font-bold py-2 px-4 rounded">
+            {/* <button className="text-white bg-blue-500 hover:bg-blue-600 font-bold py-2 px-4 rounded">
               All services
-            </button>
+            </button> */}
           </div>
       </div>
     </div>

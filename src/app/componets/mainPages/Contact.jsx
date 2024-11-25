@@ -1,5 +1,15 @@
 "use client";
 import { useState } from "react";
+import data from "../../data.json";
+
+const myCvData = data.find((item) => item.id === "MyCv");
+if (myCvData) {
+  console.log("CvDriveLink from MyCv section");
+} else {
+  console.log("MyCv data not found");
+}
+
+
 import {
   FaEnvelope,
   FaPhone,
@@ -14,16 +24,26 @@ import {
 import { SiLeetcode } from "react-icons/si";
 import { FlipWords } from "../ui/flip-words";
 
-const words = ["Get_in_touch", "Reach_out_to_me", "Contact_me", "Connect_me", "Message_me"];
+const words = [
+  "Get_in_touch",
+  "Reach_out_to_me",
+  "Contact_me",
+  "Connect_with_me",
+  "Message_me",
+];
 
 const Contact = () => {
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
     const formData = new FormData(form);
-
+  
+    // Set loading to true when the form submission begins
+    setLoading(true);
+  
     fetch(
       "https://script.google.com/macros/s/AKfycbwr8TLDmqKd2I3BIMdK06Wwll2CQKnuF_-iMDuuVap4ULzxNudkHI743nvRiWZTSwFM/exec",
       {
@@ -32,27 +52,47 @@ const Contact = () => {
       }
     )
       .then((response) => {
-        setMessage("Message sent successfully");
-        setTimeout(() => {
-          setMessage("");
-          form.reset();
-        }, 500);
+        if (response.ok) {
+          setMessage("Message sent successfully");
+          setTimeout(() => {
+            setMessage("");
+            form.reset();
+          }, 3000);
+        } else {
+          setMessage("Failed to send message. Please try again later.");
+        }
+        setLoading(false); // Reset loading state after the request finishes
       })
-      .catch((error) => console.error("Error!", error.message));
+      .catch((error) => {
+        console.error("Error!", error.message);
+        setMessage("Failed to send message. Please try again later.");
+        setLoading(false); // Reset loading state even if there’s an error
+      });
   };
+  
 
   return (
-    <div id="contact" className="relative min-h-screen flex flex-col justify-center overflow-hidden">
+    <div
+      id="contact"
+      className="relative min-h-screen flex flex-col justify-center overflow-hidden"
+    >
       {/* Background Video */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
-        <video autoPlay loop muted className="w-full h-full object-cover opacity-30">
+        <video
+          autoPlay
+          loop
+          muted
+          className="w-full h-full object-cover opacity-30"
+        >
           <source src="/bgvideocontact.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
 
       <div className="relative z-10  text-white pt-8">
-        <h1 className="mb-6 text-center text-4xl md:text-6xl font-bold">Contact Me</h1>
+        <h1 className="mb-6 text-center text-4xl md:text-6xl font-bold">
+          Contact Me
+        </h1>
         <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start justify-between">
           {/* Left side - Contact information */}
           <div className="w-full md:w-2/5 px-6 md:px-0">
@@ -64,7 +104,7 @@ const Contact = () => {
                   target="_blank"
                   className="text-green-500"
                 >
-                  monu.k23csai@nst.rishihood.edu.in
+                  contact.monurajj@gmail.com
                 </a>
               </div>
               <div className="flex items-center mb-8">
@@ -96,7 +136,8 @@ const Contact = () => {
                   <FaFacebook />
                 </a>
                 <a
-                  href="#"
+                  href="https://x.com/monu_rajj_?t=nDNpgh4pMIGooTNtj-Nlpg&s=09"
+                  target="_blank"
                   className="text-gray-500 hover:text-pink-500 text-4xl hover:-translate-y-1 transition-transform"
                 >
                   <FaTwitter />
@@ -130,20 +171,28 @@ const Contact = () => {
                   <SiLeetcode />
                 </a>
               </div>
-              <a
-                href="assets/Screenshot 2024-01-13 at 1.25.52 AM.png"
-                download="Monu's CV"
-                className="inline-block bg-pink-500 hover:bg-pink-600 text-white py-2 px-4 rounded-lg shadow-lg border border-transparent hover:border-pink-600 transition duration-300 mt-8"
-              >
-                Download CV
-              </a>
+
+              {myCvData.id==="MyCv" && (
+                <a
+                href={myCvData.CvDriveLink}
+                  // download
+                  target="_blank"
+                  download="Monu's CV"
+                  className="inline-block bg-pink-500 hover:bg-pink-600 text-white py-2 px-4 rounded-lg shadow-lg border border-transparent hover:border-pink-600 transition duration-300 mt-8"
+                >
+                  Download CV
+                </a>
+              )}
+
             </div>
           </div>
           {/* Right side - Form and Get in touch */}
           <div className="w-full md:w-3/5 px-6 md:px-0">
             <div className="get-in-touch flex items-center justify-center md:justify-start mt-8 md:mt-16">
               <FaHandshake className="text-pink-500 mr-2 text-2xl" />
-              <h1 className="text-pink-500 font-bold"><FlipWords words={words} />!</h1>
+              <h1 className="text-pink-500 font-bold">
+                <FlipWords words={words} />!
+              </h1>
               <FaHandshake className="ml-2 text-pink-500 text-2xl" />
             </div>
             <form
@@ -175,10 +224,17 @@ const Contact = () => {
                 type="submit"
                 className="bg-pink-500 hover:bg-pink-600 text-white py-2 px-10 text-lg rounded-lg shadow-lg border border-transparent hover:border-pink-600 cursor-pointer transition duration-300"
               >
-                Submit
+                {loading ? "Sending..." : "Submit"}
               </button>
             </form>
-            <span id="msg" className="block mt-4 text-center text-pink-500">{message}</span>
+            {loading && (
+              <div className="mt-4 flex justify-center">
+                <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-pink-500"></div>
+              </div>
+            )}
+            <span id="msg" className="block mt-4 text-center text-pink-500">
+              {message}
+            </span>
           </div>
         </div>
       </div>
@@ -187,3 +243,4 @@ const Contact = () => {
 };
 
 export default Contact;
+

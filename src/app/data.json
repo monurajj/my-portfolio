@@ -1,47 +1,49 @@
-[{  "id":"aboutPage",
+[
+    {  "id":"aboutPage",
     "skills": {
       "Web-developer": true,
+      "Figma":true,
       "Frontend developer": true,
-      "Video Editor": true,
       "Professional Video editor": "Green screen, transition...",
       "Robotics": true,
       "Projects completed": "Successfully completed more than 100 projects",
-      "Programming languages": ["Python", "CSS", "HTML", "Java", "JavaScript", "React"]
+      "Programming languages": ["Python", "CSS", "HTML", "Java", "JavaScript", "React", "sql", "Mongodb", "Tailwind"]
     },
     "experience": {
-      "Coding": "One year coding experience",
+        "Internship":"Internship experienced with IITRoorkee",
+      "Coding": "Two year coding experience",
       "Video Editing": "More than a year video editing experience"
     },
     "education": {
-      "Coding": "One year coding experience",
-      "Video Editing": "More than a year video editing experience",
-      "jgfvihbkh":"jhbvilhbhjvbjkh"
+      "Coding": "Two year coding experience",
+      "Video Editing": "More than a year video editing experience"
     }
-    
   },
+
 {
     "id":"sevicePage",
     "WebDisgn" :{
         "p":"Frontend magician! I'm Monu, turning visions into pixel-perfect reality. Proficient in HTML, CSS, and JavaScript, my passion lies in crafting sleek, user-centric websites. Let's collaborate on your next project! #WebDev #FrontendMagic",
-        "Demolink":"Not available"
+        "Demolink":"https://rent-karo-page.vercel.app/DashBoard"
     },
     "Calculator" :{
         "p":"Designed and implemented a dynamic and user-friendly calculator using HTML, CSS, and JavaScript, showcasing my proficiency in front-end development and passion for creating intuitive and engaging web applications.",
-        "Demolink":"Not available"
+        "Demolink":"/calculator"
     },
     "Play Games" :{
         "p":"Successfully crafted an interactive and visually appealing game using HTML, CSS, and JavaScript, demonstrating a keen eye for design, strong coding abilities, and a passion for creating engaging user experiences in the realm of web-based gaming.",
-        "Demolink":"Not available"
+        "Demolink":"/games"
     },
     "Video Editing" :{
         "p":"Passionate video editor here, transforming concepts into cinematic masterpieces. Proficient in (davinci resolve, openshot , kinemaster , pwerdirector...) I specialize in visual storytelling that captivates. Let's bring your story to life! #VideoEditing #VisualStorytelle",
         "Demolink":"https://youtu.be/kBmNpEcihA4?si=1Mq5sfxUxwKrwKnH"
     }
 },
+
 {
     "id":"PortfolioPage",
     "Robotics": {
-        "p":"I had worked on many projects like remote control cars, Gesture control wheelchair,boat, helicopters, humanoid robot, obstacle avoiding robot, and also many projects based on aurdino,PIR,LDR....",
+        "p":"I had worked on many projects like remote control cars, Gesture control wheelchair,boat, helicopters, humanoid robot and also many projects based on aurdino, esp microcontrollers and sensors...",
         "ImageLink":"https://i.ibb.co/tx3zXNb/2b8fe4a5-eba8-420b-bb25-222188a6fc37.jpg",
         "ExploreMore":"Link is not available"
     },
@@ -51,7 +53,7 @@
         "ExploreMore":"https://youtu.be/kBmNpEcihA4?si=1Mq5sfxUxwKrwKnH"
     },
     "Website Developer":{
-        "p":"I am also a fronted website developer",
+        "p":"I am also a full-stack website developer with handson experience",
         "ImageLink":"https://i.ibb.co/61PQ5dQ/work-3-1-1.jpg",
         "ExploreMore":"https://youtu.be/kBmNpEcihA4?si=1Mq5sfxUxwKrwKnH"
     },
@@ -59,37 +61,160 @@
         "p":"As a video editor, I bring narratives to life through seamless cutsand a keen eye for detail. Turning moments into cinematic experiences🎥 #VideoEditing #CreativeStorytelling",
         "ImageLink":"https://i.ibb.co/Dk7vrdL/1fce1000-f25c-468c-be75-4b55cc353d44.jpg",
         "ExploreMore":"https://youtu.be/kBmNpEcihA4?si=1Mq5sfxUxwKrwKnH"
+    },
+    "App Development":{
+        "p":"Currently under progress...",
+
+        "ImagePath":"src/app/assets/monuAppDevelopment.png",
+        "ExploreMore":"https://youtu.be/kBmNpEcihA4?si=1Mq5sfxUxwKrwKnH"
     }
+    
 },
     {
         "id": "Products",
         "Products 0": {
             "ProductName": "Monadonocks",
-            "p": "Offering essentials at unbeatable prices, with a significant portion of profits dedicated to charitable causes and launching our NGO to support communities",
-            "ProductLink": "https://66ca3bae967fc4000942d7ab--aesthetic-lokum-ef0e0b.netlify.app/",
+            "p": "We're on a mission to make a difference. Through our innovative services and commitment to social responsibility, we're creating positive change in communities around the world.",
+            "ProductLink": "https://monadnocks.in/",
             "backgroundImage": "https://i.ibb.co/vPnMbB4/610f3a18-bb1a-4f56-9ff5-ece9fdf7ce6e.jpg"
         }
     ,
     "Product 01":{
-        "ProductName":"jaasdgrwish",
+        "ProductName":"ZenBot",
         "p":"Mental health solver services by Monadnocks where we prioritise your health more than anything.",
         "ProductLink":"#",
-        "backgroundImage": "https://i.ibb.co/234Zjy1/d3f254a6-d443-4e53-9523-0b68cdfb8dc6.jpg"
+        "backgroundImage": "https://i.ibb.co/Wt5Rfpf/Nst-1st-create-image-related-to-this-Mental-health-solver-1aae0a16-f3fc-4386-a130-f6b59b1df3a5.jpg"
     },
     "Product 02":{
-        "ProductName":"jarwfdbish",
-        "p":"As a video editor, I bring narratives to life through seamless cutsand a keen eye for detail. Turning moments into cinematic experiences🎥 #VideoEditing #CreativeStorytelling",
-        "ProductLink":"#",
-        "backgroundImage": "https://i.ibb.co/234Zjy1/d3f254a6-d443-4e53-9523-0b68cdfb8dc6.jpg"
+        "ProductName":"Whack-a-Mole",
+        "p":"Whack-a-Mole is a fun game where players hit moles popping out of holes using a mallet. The goal is to score points by hitting as many moles as possible within a time limit. It tests reflexes and coordination, offering simple and engaging gameplay for all ages.",
+        "ProductLink":"/Whack-a-Mole",
+        "backgroundImage": "https://i.ibb.co/fGFVQWv/istockphoto-1153033854-612x612.jpg"
     },
     "Product 03":{
-        "ProductName":"jarwdkgnkish",
-        "p":"As a video editor, I bring narratives to life through seamless cutsand a keen eye for detail. Turning moments into cinematic experiences🎥 #VideoEditing #CreativeStorytelling",
-        "ProductLink":"#",
-        "backgroundImage": "https://i.ibb.co/234Zjy1/d3f254a6-d443-4e53-9523-0b68cdfb8dc6.jpg"
+        "ProductName":"Catch the Ball",
+        "p":"Catch the Ball is a web game where players score by clicking yellow balls, avoid red balls, and collect green power-ups. It features a rulebook, pause/resume controls, and score tracking, with increasing difficulty for a dynamic, engaging experience.",
+        "ProductLink":"/catch-the-ball",
+        "backgroundImage": "https://i.ibb.co/NKksjSP/Screenshot-2024-11-24-at-8-03-35-PM.png"
     }
-    
+},
+{
+    "id": "MyCv",
+    "CvDriveLink": "https://drive.google.com/file/d/1mFG8tuIwHydVN3s1CDQP8mzkc3vLuIjK/view?usp=sharing"
+  },
 
+  {
+    "id":"Games",
+    "Game1": {
+        "Game Name":"Whack-a-Mole",
+        "About":"Whack-a-Mole is a fun game where players hit moles popping out of holes using a mallet. The goal is to score points by hitting as many moles as possible within a time limit. It tests reflexes and coordination, offering simple and engaging gameplay for all ages.",
+        "ImageLink":"https://i.ibb.co/fGFVQWv/istockphoto-1153033854-612x612.jpg",
+        "PlayNow":"/Whack-a-Mole"
+    },
+    "Game2": {
+        "Game Name":"Catch the Ball",
+        "About":"Catch the Ball is a web game where players score by clicking yellow balls, avoid red balls, and collect green power-ups. It features a rulebook, pause/resume controls, and score tracking, with increasing difficulty for a dynamic, engaging experience.",
+        "ImageLink":"https://i.ibb.co/fGFVQWv/istockphoto-1153033854-612x612.jpg",
+        "PlayNow":"/catch-the-ball"
+    },
+    "Game3": {
+        "Game Name":"Space Burger",
+        "About":"Space Burger is an arcade-style game where players catch falling burger ingredients while dodging obstacles. Using arrow keys, players aim to build high scores across multiple levels, each introducing new challenges and increasing difficulty.",
+        "ImageLink":"https://i.ibb.co/fGFVQWv/istockphoto-1153033854-612x612.jpg",
+        "PlayNow":"/Space-Burger"
+    }
+},
+{
+    "id": "aboutMe",
+    "PersonalDetails": {
+        "Name": "Monu Rajj",
+        "Title": "Developer & Innovator",
+        "Bio": "Passionate about technology and innovation, I strive to create solutions that make life easier for everyone.",
+        "Location": "Patna, India",
+        "ProfileImage": "https://example.com/profile_image.jpg"
+    },
+    "Images": {
+        "CoverImage": "https://example.com/cover_image.jpg",
+        "Gallery": [
+            "https://example.com/image1.jpg",
+            "https://example.com/image2.jpg",
+            "https://example.com/image3.jpg"
+        ]
+    },
+    "MyFavoriteSuperHeroes": {
+        "Hero1": {
+            "Name": "RajKumar",
+            "Punchline": "Suno sabki karo khud ki",
+            "Image": "https://i.ibb.co/jZM3QRC/Whats-App-Image-2024-11-25-at-18-59-27.png"
+        },
+        "Hero2": {
+            "Name": "IronMan",
+            "Punchline": "Life is not easy",
+            "Image": "https://i.ibb.co/sWzV1TT/Iron-Man-Infobox.webp"
+        },
+        "Hero3": {
+            "Name": "Groot",
+            "Punchline": "You have to dream before your dreams can come true.",
+            "Image": "https://i.ibb.co/mRqWh95/APJ-2008.webp"
+        }
+    },
+    "MySocialHandles": {
+        "LinkedIn": "https://www.linkedin.com/in/monu-rajj-insta--monu-rajj-?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        "Instagram": "https://www.instagram.com/_monu_rajj_?igsh=MXRsNWk5NDF0NjhqMQ==",
+        "Facebook": "https://www.facebook.com/profile.php?id=100063260070686&mibextid=ZbWKwL",
+        "GitHub": "https://github.com/monurajj/",
+        "Twitter": "https://x.com/monu_rajj_?t=nDNpgh4pMIGooTNtj-Nlpg&s=09"
+    },
+    "ProfessionalJourney": [
+        {
+            "Year": 2022,
+            "Role": "Intermediate",
+            "Company": "SDS college kaler, Bihar",
+            "Description": ""
+        },
+        {
+            "Year": 2023,
+            "Role": "CSAI student",
+            "Company": "Newton School Of techonoly",
+            "Description": "Pursuing B.Tech degree in Computer Science and Artificial Intelligence (CSAI) from RU & NST"
+        },
+            {
+                "Year": 2024,
+                "Role": "Frontend",
+                "Company": "IITRoorkee",
+                "Description": "Build a website to help minorities"
+            }
+    ],
+    "Skills": [
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Next.js",
+        "Nest.js",
+        "Tailwind",
+        "Figma",
+        "Sql",
+        "MongoDB",
+        "CSS",
+        "Arduino Programming",
+        "Robotics"
+    ],
+    "Hobbies": [
+        "Gaming",
+        "Traveling",
+        "Reading",
+        "Building Hardware Projects"
+    ],
+    "Achievements": [
+        "Two times first position in Science Exhibition",
+        "Built a working snake game using Arduino.",
+        "Developed Rent-karo website for hussle free room rental"
+    ],
+    "MissionStatement": "To make technology more accessible and improve lives with innovative solutions.",
+    "ContactForm": {
+        "Email": "contact.monurajj@gmail.com",
+        "Phone": ""
+    }
 }
 ]
   

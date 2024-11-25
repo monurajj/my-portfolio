@@ -1,6 +1,7 @@
 "use client"
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import Image2 from "../../assets/monuImage.png"
 import profileimage from "../../assets/profileImagenobg.png";
 import signImage from "../../assets/sign1.png";
 import { BackgroundBeams } from "../ui/background-beams";
@@ -132,7 +133,8 @@ const HomePage = () => {
             <div className="rounded-[20px] overflow-hidden shadow-glow hover:shadow-glow-lg transition-shadow duration-300">
               <Image
                 className="w-full h-full object-cover"
-                src={profileimage}
+                // src={profileimage}
+                src={Image2}
                 alt="Profile Image"
               />
             </div>
