@@ -114,7 +114,7 @@ const Contact = () => {
                   target="_blank"
                   className="text-green-500"
                 >
-                  +917541062514
+                  +91-7541062514
                 </a>
               </div>
               <div className="flex items-center mb-8">
@@ -124,7 +124,7 @@ const Contact = () => {
                   target="_blank"
                   className="text-green-500"
                 >
-                  Sonipat Haryana
+                  Sonipat, Haryana
                 </a>
               </div>
               <div className="flex space-x-4 mb-4">

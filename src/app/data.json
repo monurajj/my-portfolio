@@ -174,14 +174,14 @@
         },
         {
             "Year": 2023,
-            "Role": "CSAI student",
-            "Company": "Newton School Of techonoly",
-            "Description": "Pursuing B.Tech degree in Computer Science and Artificial Intelligence (CSAI) from RU & NST"
+            "Role": "CS & AI student",
+            "Company": "Newton School Of Technology",
+            "Description": "Pursuing B.Tech degree in Computer Science and Artificial Intelligence (CS & AI) from RU & NST"
         },
             {
                 "Year": 2024,
                 "Role": "Frontend",
-                "Company": "IITRoorkee",
+                "Company": "IIT Roorkee",
                 "Description": "Build a website to help minorities"
             }
     ],
@@ -201,7 +201,7 @@
     ],
     "Hobbies": [
         "Gaming",
-        "Traveling",
+        "Travelling",
         "Reading",
         "Building Hardware Projects"
     ],

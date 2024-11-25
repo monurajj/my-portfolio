@@ -51,7 +51,7 @@ const HomePage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
             >
-              Student of CSAI
+              Student of CS & AI
             </motion.p>
             <motion.h1
               className="text-4xl font-black my-5 bg-gradient-to-r from-red-500 to-green-400 text-transparent bg-clip-text animate-anime"

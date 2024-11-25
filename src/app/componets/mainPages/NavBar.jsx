@@ -90,18 +90,20 @@ const Navbar = () => {
             <FaServicestack /> Services
           </Link>
 
-          <Link
-            href="#products"
-            className="text-lg flex items-center gap-2 transition-transform hover:scale-110 hover:text-blue-500 text-gray-400 md:text-white"
-          >
-            <MdOutlineProductionQuantityLimits /> Products
-          </Link>
 
           <Link
             href="#portfolio"
             className="text-lg flex items-center gap-2 transition-transform hover:scale-110 hover:text-blue-500 text-gray-400 md:text-white"
           >
             <FaAddressCard /> Portfolio
+          </Link>
+
+          
+          <Link
+            href="#products"
+            className="text-lg flex items-center gap-2 transition-transform hover:scale-110 hover:text-blue-500 text-gray-400 md:text-white"
+          >
+            <MdOutlineProductionQuantityLimits /> Products
           </Link>
 
           {!isOpen ? (
