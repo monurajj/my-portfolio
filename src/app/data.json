@@ -148,11 +148,11 @@
         },
         "Hero2": {
             "Name": "IronMan",
-            "Punchline": "Life is not easy",
+            "Punchline": "The truth is… I am Iron Man.",
             "Image": "https://i.ibb.co/sWzV1TT/Iron-Man-Infobox.webp"
         },
         "Hero3": {
-            "Name": "Groot",
+            "Name": "A.P.J. Abdul Kalam",
             "Punchline": "You have to dream before your dreams can come true.",
             "Image": "https://i.ibb.co/mRqWh95/APJ-2008.webp"
         }
