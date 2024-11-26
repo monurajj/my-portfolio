@@ -1,23 +1,22 @@
 [
     {  "id":"aboutPage",
     "skills": {
-      "Web-developer": true,
-      "Figma":true,
-      "Frontend developer": true,
-      "Professional Video editor": "Green screen, transition...",
-      "Robotics": true,
-      "Projects completed": "Successfully completed more than 100 projects",
-      "Programming languages": ["Python", "CSS", "HTML", "Java", "JavaScript", "React", "sql", "Mongodb", "Tailwind"]
+      "Web-developer": "Full stack web developer",
+      "Video Editor": "Green screen, transition, overlayring, snapeffects, etc...",
+      "Robotics": "Successfully completed more than 100 projects",
+      "Programming languages": ["Python", "CSS", "HTML", "Java", "JavaScript", "React", "SQL", "MongoDB", "NodeJs", "NextJs", "Tailwind"]
     },
     "experience": {
-        "Internship":"Internship experienced with IITRoorkee",
       "Coding": "Two year coding experience",
+      "Internship":"Webdevelopment intership experience",
       "Video Editing": "More than a year video editing experience"
     },
     "education": {
-      "Coding": "Two year coding experience",
-      "Video Editing": "More than a year video editing experience"
+      "Matriculate": "From Gyansthali High School, Patna",
+      "Intermediate": "From SDS college kaler, Bihar",
+      "College":"Pursuing B.tech in CS and AI from Rishihood University & Newton School Of technology"
     }
+    
   },
 
 {
