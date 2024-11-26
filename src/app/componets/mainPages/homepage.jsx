@@ -75,7 +75,7 @@ const HomePage = () => {
               <div className="rounded-[20px] overflow-hidden shadow-glow hover:shadow-glow-lg transition-shadow duration-300">
                 <Image
                   className="w-full h-full object-cover"
-                  src={profileimage}
+                  src={Image2}
                   alt="Profile Image"
                 />
               </div>
