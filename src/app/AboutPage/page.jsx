@@ -268,7 +268,7 @@ const Achievements = ({ achievements }) => {
 const FavoriteHeroes = ({ heroes }) => {
   return (
     <div className="text-black bg-white p-6 rounded-lg shadow-md">
-      <h2 className="text-xl font-bold mb-6">My Favorite Superheroes</h2>
+      <h2 className="text-xl font-bold mb-6">My Favourite Superheroes</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {Object.values(heroes).map((hero, index) => (
           <div

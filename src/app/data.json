@@ -8,7 +8,7 @@
     },
     "experience": {
       "Coding": "Two year coding experience",
-      "Internship":"Webdevelopment intership experience",
+      "Internship":"Worked as frontend developer with IIT Roorkee",
       "Video Editing": "More than a year video editing experience"
     },
     "education": {
@@ -21,7 +21,7 @@
 
 {
     "id":"sevicePage",
-    "WebDisgn" :{
+    "Web Design" :{
         "p":"Frontend magician! I'm Monu, turning visions into pixel-perfect reality. Proficient in HTML, CSS, and JavaScript, my passion lies in crafting sleek, user-centric websites. Let's collaborate on your next project! #WebDev #FrontendMagic",
         "Demolink":"https://rent-karo-page.vercel.app/DashBoard"
     },
@@ -168,7 +168,7 @@
         {
             "Year": 2022,
             "Role": "Intermediate",
-            "Company": "SDS college kaler, Bihar",
+            "Company": "SDS college (kaler), Bihar",
             "Description": ""
         },
         {
@@ -181,7 +181,7 @@
                 "Year": 2024,
                 "Role": "Frontend",
                 "Company": "IIT Roorkee",
-                "Description": "Build a website to help minorities"
+                "Description": "Built a website to help minorities"
             }
     ],
     "Skills": [
@@ -208,6 +208,7 @@
         "Two times first position in Science Exhibition",
         "Built a working snake game using Arduino.",
         "Developed Rent-karo website for hussle free room rental"
+        
     ],
     "MissionStatement": "To make technology more accessible and improve lives with innovative solutions.",
     "ContactForm": {
