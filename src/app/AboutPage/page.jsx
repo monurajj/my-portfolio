@@ -3,11 +3,10 @@
 import Image from "next/image";
 import { MapPin, Mail, Calendar, Download } from "lucide-react";
 import MyImage from "../assets/cropedImage10.png";
-
 const ProfileHeader = ({ personalDetails }) => {
   return (
     <div className="relative overflow-hidden">
-      {/* Background Pattern */}
+      {/* Background Patterns */}
       <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="absolute inset-0 bg-grid-white/[0.2] bg-grid" />
         <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-background/20" />
