@@ -113,7 +113,7 @@ const Navbar = () => {
             className="flex items-center space-x-2"
           >
             <Link
-              href="https://monadonocks.netlify.app/"
+              href="https://monadonocks.in"
               target="_blank"
               rel="noopener noreferrer"
               className="text-lg flex items-center gap-2 transition-transform hover:scale-110 hover:text-blue-500 text-gray-400 md:text-white"
@@ -125,7 +125,7 @@ const Navbar = () => {
           </HoverBorderGradient>
           ) :(
             <Link
-              href="https://monadonocks.netlify.app/"
+              href="https://monadonocks.in"
               target="_blank"
               rel="noopener noreferrer"
               className="text-lg flex items-center gap-2 transition-transform hover:scale-110 hover:text-blue-500 text-gray-400 md:text-white"
